@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+:root{
+    --succes-color:greenyellow;
+    --error-color:red;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: beige;
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container{
+    background-color: white;
+    border: white solid;
+    border-radius: 10px;
+    box-shadow: gray 10px 10px 10px 0px;
+    width: 400px;
+}
+
+h2{
+    text-align: center;
+    margin: 0 0 20px;
+}
+
+.form{
+    padding: 20px 30px;
+}
+
+.form-control{
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    position: relative;
+}
+.form-control label{
+    display: block;
+    color: #777;
+    margin-bottom: 5px;
+}
+.form-control input {
+    border: 1px solid rgb(126, 104, 104);
+    border-radius: 4px;
+    display: block;
+    width: 100%;
+    padding: 5px;
+    font-size: 14px;
+}
+.form-control input:focus {
+    outline: 0;
+    border-color: rgb(211, 193, 167);
+}
+.form-control.success input {
+    border-color: var(--succes-color);
+}
+.form-control.error input {
+    border-color: var(--error-color);
+}
+.form-control small{
+    color: var(--error-color);
+    position: absolute;
+    bottom: 0;
+    left:0;
+    visibility: hidden;
+}
+.form-control.error small{
+    visibility: visible;
+}
+.form button{
+    cursor: pointer;
+    background-color: rgb(102, 38, 42);
+    border: 2px  rgb(102, 38, 42) solid;
+    border-radius: 4px;
+    color:whitesmoke;
+    display: block;
+    font-size:16px;
+    width: 100%;
+    padding:10px;
+    margin-top: 20px;
+}
